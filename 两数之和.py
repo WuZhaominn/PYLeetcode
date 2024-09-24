@@ -1,3 +1,7 @@
+列表 []
+字典{}
+元组()
+
 方法1：
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
