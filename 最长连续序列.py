@@ -16,6 +16,24 @@ class Solution:chatgpt生成算法
         max_length=max(max_length,curr_length)
         return max_length
         
-                
-
-
+            
+class Solution:时间空间都为O(n)
+    def longestConsecutive(self, nums: List[int]) -> int:
+        num=set(nums)
+        max_len=0
+        while num:
+            n=num.pop()
+            i=n+1
+            l=0
+            r=0
+            while i in num:
+                num.remove(i)
+                i+=1
+                r+=1
+            i=n-1
+            while i in num:
+                num.remove(i)
+                i-=1
+                l+=1
+            max_len=max(max_len,r+l+1)
+        return max_len
