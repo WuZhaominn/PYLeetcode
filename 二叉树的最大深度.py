@@ -19,7 +19,7 @@ class Solution:
         # return defth
 
 
-        #递归
+        #递归  后序遍历
         return self.getHight(root)
 
     def getHight(self,node):
