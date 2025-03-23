@@ -3,10 +3,8 @@ class Solution:
         left,right = 0,len(nums)-1
         found =-1
         res =[-1,-1]
-        while left <right:
-
+        while left <=right:
             mid = left+(right-left) //2
-
             if nums[mid] ==target:
                 found =mid
                 break
@@ -15,7 +13,7 @@ class Solution:
             else:
                 right =mid -1
         if found ==-1:
-            return [-1,-1]
+            return res
         res=[found,found]
         for i in range(found+1,len(nums)):
             if nums[i] == target:
